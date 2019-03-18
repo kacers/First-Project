@@ -141,6 +141,9 @@
            if(niveau.value !== ""){
                niveau_erreur.textContent = "";
            }
+           if(niveau.value !== 0 ){
+               niveau_erreur.textContent = "";
+           }
            if(email.value !== ""){
                email_erreur.textContent = "";
            }
@@ -185,6 +188,11 @@
            }
            if (niveau.value == ""){
                niveau_erreur.textContent = "le champ est vide !";
+               niveau_erreur.style = "color:red";
+               return false;
+           }
+           if (niveau.value == 0 ){
+               niveau_erreur.textContent = "entrez un niveau valide !";
                niveau_erreur.style = "color:red";
                return false;
            }         
